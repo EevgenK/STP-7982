@@ -1,5 +1,4 @@
-@import './node_modules/normalize-scss/sass/normalize';
-@include normalize();
+@import 'normalize-scss/sass/normalize';
 @import './header.scss';
 @import './components/main_page/main_page.scss';
 
