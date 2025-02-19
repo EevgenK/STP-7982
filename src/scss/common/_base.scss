@@ -2,7 +2,8 @@ section {
   margin-bottom: 32px;
 }
 .container {
-  padding: 0 12px;
+  border: 1px solid red;
+  padding: 20px 12px;
   margin: 0 auto;
   @include media(mobile) {
     width: $mobile;
