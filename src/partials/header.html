@@ -1,13 +1,30 @@
 <header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="./page-2.html" class="nav-link">Page 2</a>
-      </li>
-
-      <li class="nav-item">
-        <a href="./page-3.html" class="nav-link">Page 3</a>
-      </li>
-    </ul>
-  </nav>
+  <div class="container header-container">
+    <button class="burger-menu js-open-menu">
+      <svg class="burger" width="36" height="36">
+        <use href="./img/sprite.svg#icon-burger"></use>
+      </svg>
+    </button>
+    <div class="menu-container js-menu-container">
+      <nav class="nav">
+        <button class="close-btn js-close-menu">
+          <svg width="16" height="16">
+            <use href="../img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+        <ul class="nav-list">
+          <li><a class="header-link" href="/">Home</a></li>
+          <li><a class="header-link" href="#">Benefits</a></li>
+          <li>
+            <a class="header-link" href="#about">About the Game </a>
+          </li>
+          <li><a class="header-link" href="#">Gallery</a></li>
+          <li><a class="header-link" href="#">User Reviews</a></li>
+          <li>
+            <a class="header-link" href="#choose">Why Choose Trail Boss BMX</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>

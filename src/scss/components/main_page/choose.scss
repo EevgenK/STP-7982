@@ -51,6 +51,8 @@
       .choose-image {
         display: inline-block;
         margin-right: 12px;
+      }
+      .google-image {
         filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.72));
         transition: filter $transition;
       }
