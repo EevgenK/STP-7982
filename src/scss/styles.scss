@@ -1,6 +1,7 @@
 @import 'normalize-scss/sass/normalize';
 @import './header.scss';
 @import './components/main_page/main_page.scss';
+@import './common/_base.scss';
 
 :root {
   font-family: $font-family;
@@ -15,18 +16,4 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
-
-section {
-  margin-bottom: 32px;
-}
-.container {
-  padding: 0 12px;
-  margin: 0 auto;
-  @include media(mobile) {
-    width: $mobile;
-  }
-  @include media(desktop) {
-    width: $desktop;
-  }
 }
