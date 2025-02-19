@@ -1,16 +1,15 @@
 .choose {
-  background-image: url(/img/choose/flag.svg),
-    url(/img/choose/flag-r.svg),
-    linear-gradient(
-      180deg,
-      $_main_bg_color 0%,
-      #a63900 50%,
-      $_main_bg_color 100%
-    );
-  background-repeat: no-repeat, no-repeat;
-  background-position: center left, center right;
+  background-image: linear-gradient(
+    180deg,
+    $_main_bg_color 0%,
+    #a63900 50%,
+    $_main_bg_color 100%
+  );
 
   .container.choose-container {
+    background-image: url(/img/choose/flag.svg), url(/img/choose/flag-r.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center left, center right;
     .choose-title {
       font-style: italic;
       font-weight: 500;
