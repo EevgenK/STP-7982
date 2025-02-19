@@ -1,0 +1,29 @@
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-burger" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.7778" d="M4.444 9.778h23.111M4.444 16h19.033M4.444 22.222h23.111"></path>
+</symbol>
+<!-- <symbol id="icon-hugeicons_cancel-01" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.7778" d="M7.111 0.889h17.778c3.436 0 6.222 2.786 6.222 6.222v17.778c0 3.436-2.786 6.222-6.222 6.222h-17.778c-3.436 0-6.222-2.786-6.222-6.222v-17.778c0-3.436 2.786-6.222 6.222-6.222z"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.3333" d="M22.222 9.778l-12.444 12.444M9.778 9.778l12.444 12.444"></path>
+</symbol> -->
+
+<symbol id="icon-close" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.7778" d="M7.111 0.889h17.778c3.436 0 6.222 2.786 6.222 6.222v17.778c0 3.436-2.786 6.222-6.222 6.222h-17.778c-3.436 0-6.222-2.786-6.222-6.222v-17.778c0-3.436 2.786-6.222 6.222-6.222z"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.3333" d="M22.222 9.778l-12.444 12.444M9.778 9.778l12.444 12.444"></path>
+</symbol>
+
+<symbol id="icon-left_arrow" viewBox="0 0 68 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M37.75 8.5l-7.5 7.5 7.5 7.5"></path>
+</symbol>
+
+<symbol id="icon-right_arrow" viewBox="0 0 68 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M30.25 23.5l7.5-7.5-7.5-7.5"></path>
+</symbol>
+
+<symbol id="icon-star" viewBox="0 0 31 32">
+<path d="M15.567 22.87l-5.45 3.305c-0.241 0.154-0.492 0.22-0.755 0.198s-0.492-0.11-0.689-0.264c-0.197-0.154-0.35-0.347-0.46-0.578s-0.131-0.49-0.066-0.777l1.445-6.247-4.826-4.198c-0.219-0.198-0.355-0.424-0.41-0.678s-0.038-0.502 0.049-0.743c0.087-0.241 0.218-0.44 0.394-0.595s0.417-0.254 0.722-0.297l6.369-0.562 2.462-5.884c0.109-0.264 0.279-0.463 0.509-0.595s0.465-0.198 0.705-0.198c0.24 0 0.475 0.066 0.705 0.198s0.4 0.331 0.509 0.595l2.462 5.884 6.369 0.562c0.306 0.044 0.547 0.143 0.722 0.297s0.306 0.353 0.394 0.595c0.088 0.242 0.104 0.491 0.050 0.744s-0.191 0.479-0.411 0.677l-4.826 4.198 1.445 6.247c0.066 0.286 0.044 0.546-0.066 0.777s-0.263 0.424-0.46 0.578c-0.197 0.153-0.427 0.242-0.689 0.264s-0.514-0.043-0.755-0.198l-5.45-3.305z"></path>
+</symbol>
+
+</defs>
+</svg>
