@@ -1,29 +1,45 @@
 .swiper-wrap {
   position: relative;
+  margin-bottom: 16px;
 }
-
-.benefits-list > .swiper-slide {
+.swiper {
+  width: 280px;
+  height: 100%;
+}
+.swiper-slide {
   font-size: 16px;
   background: transparent;
-
   border: 2px solid $_main_text_color;
   border-radius: 8px;
-  padding: 24px;
-  width: 280px;
+  padding: 0 24px;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
 
-  color: red;
+  min-height: 144px;
 }
 .benefits-item_title {
   margin-bottom: 16px;
 }
 .benefits-btn.swiper-button-next,
 .benefits-btn.swiper-button-prev {
+  background: transparent;
   width: 36px;
   height: 36px;
   color: $_main_text_color;
   border-radius: 8px;
   border: 2px solid $_main_text_color;
-  top: 5%;
+
+  &:hover {
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.72);
+    background: rgba(255, 255, 255, 0.32);
+  }
+}
+.benefits-btn.swiper-button-next,
+.benefits-btn.swiper-button-prev {
+  @include media(desktop) {
+    display: none;
+  }
 }
 /*add to sprite and use*/
 .benefits-btn.swiper-button-next::after,
@@ -31,13 +47,13 @@
   font-size: 22px;
 }
 .benefits {
+  background: linear-gradient(180deg, #040023 0%, #a63900 50%, #040023 100%);
   &-title {
     text-align: center;
-    margin-bottom: 16px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
   }
   &-list {
     display: flex;
-    // flex-direction: column;
     gap: 12px;
   }
 }

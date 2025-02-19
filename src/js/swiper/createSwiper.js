@@ -1,16 +1,20 @@
-const swiper = new Swiper('.mySwiper', {
-  pagination: {
-    modules: [Swiper.Grid],
-    slidesPerView: 1,
-    // grid: {
-    //   rows: 2,
-    //   fill: 'row',
-    // },
-    // spaceBetween: 12,
+import Swiper from 'swiper';
+import { Grid, Navigation } from 'swiper/modules';
+('swiper');
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/scss/grid';
 
-    // el: '.swiper-pagination',
-    // type: 'progressbar',
+const swiper = new Swiper('.mySwiper', {
+  modules: [Grid, Navigation],
+  slidesPerView: 1.25,
+  grabCursor: true,
+  grid: {
+    rows: 1.5,
+    fill: 'row',
   },
+
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
