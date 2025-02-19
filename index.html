@@ -24,13 +24,15 @@
       rel="stylesheet"
     />
     
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script> -->
     <script type="module" crossorigin src="/STP-7982/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/STP-7982/assets/index-2d055e7d.css">
+    <link rel="modulepreload" crossorigin href="/STP-7982/assets/vendor-d8d981d2.js">
+    <link rel="stylesheet" href="/STP-7982/assets/vendor-9d094e88.css">
+    <link rel="stylesheet" href="/STP-7982/assets/index-617cf96f.css">
   </head>
   <body>
     <header class="header">
@@ -58,10 +60,12 @@
 </section>
 
       <section class="benefits">
-  <div class="container swiper-wrap">
-    <div class="benefits-btn swiper-button-next"></div>
-    <h2 class="benefits-title">Benefits</h2>
-    <div class="benefits-btn swiper-button-prev"></div>
+  <div class="container">
+    <div class="swiper-wrap">
+      <button class="benefits-btn swiper-button-next"></button>
+      <h2 class="benefits-title">Benefits</h2>
+      <button class="benefits-btn swiper-button-prev"></button>
+    </div>
     <div class="swiper mySwiper">
       <ul class="benefits-list swiper-wrapper">
         <li class="benefits-item swiper-slide">
@@ -159,7 +163,7 @@
 </section>
 
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
     
   </body>
 </html>
