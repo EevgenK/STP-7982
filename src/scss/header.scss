@@ -13,6 +13,10 @@
       border: none;
       outline: transparent;
       padding: 0;
+      background-color: transparent;
+      .burger {
+        stroke: $_main_text_color;
+      }
     }
     .menu-container {
       position: fixed;
@@ -27,12 +31,13 @@
       transition: transform $transition;
 
       .close-btn {
+        border: none;
+        padding: 0;
         outline: transparent;
         background-color: transparent;
         margin-bottom: 32px;
         border-radius: 8px;
-        padding: 10px;
-        border: 2px solid rgba(255, 255, 255, 0.72);
+        stroke: rgba(255, 255, 255, 0.72);
       }
       .nav-list {
         text-align: center;
