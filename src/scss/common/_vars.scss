@@ -3,6 +3,12 @@ $_main_bg_color: #040023;
 $_second_color: #db4b00;
 $_links_color: #8bbcff;
 $_accent_btn_color: #d3652c;
+$_liner_bg: linear-gradient(
+  180deg,
+  $_main_bg_color 0%,
+  #a63900 50%,
+  $_main_bg_color 100%
+);
 
 $font-family: 'Roboto Condensed', sans-serif;
 $second-family: 'Inter', sans-serif;
