@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
           el: '.swiper-pagination',
           clickable: true,
         },
+
         navigation: {
           nextEl: '.gallery-btn.swiper-button-next',
           prevEl: '.gallery-btn.swiper-button-prev',

@@ -1,13 +1,28 @@
 <section class="gallery">
-  <div class="container">
-    <div class="swiper-wrap">
-      <button class="gallery-btn swiper-button-next"></button>
-      <h2 class="gallery-title">Gallery</h2>
-      <button class="gallery-btn swiper-button-prev"></button>
-    </div>
+  <div class="container gallery-container">
+    <button class="gallery-btn swiper-button-next"></button>
+    <h2 class="gallery-title">Gallery</h2>
+    <button class="gallery-btn swiper-button-prev"></button>
 
     <div class="swiper swiperGallery">
       <ul class="swiper-wrapper">
+        <li data-hash="slide6" class="swiper-slide">
+          <picture>
+            <source
+              srcset="
+                ./img/gallery/sixth_slide.jpg    1x,
+                ./img/gallery/sixth_slide@2x.jpg 2x
+              "
+              loading="lazy"
+            />
+            <img
+              class="gallery-img"
+              src="./img/gallery/sixth_slide.jpg"
+              alt="game image"
+              width="296px"
+            />
+          </picture>
+        </li>
         <li data-hash="slide1" class="swiper-slide">
           <picture>
             <source
@@ -95,7 +110,10 @@
         </li>
       </ul>
 
-      <div class="swiper-pagination"></div>
+      <!-- <div class="pagination-wrap"> -->
+
+      <!-- </div> -->
     </div>
+    <div class="swiper-pagination"></div>
   </div>
 </section>
