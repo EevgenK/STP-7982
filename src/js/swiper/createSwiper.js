@@ -1,10 +1,32 @@
 import Swiper from 'swiper';
-import { Grid, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Grid, Navigation, Pagination } from 'swiper/modules';
 ('swiper');
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/scss/grid';
+
+const swiperReviews = new Swiper('.swiperReviews', {
+  modules: [Navigation, Autoplay],
+  speed: 250,
+  grabCursor: true,
+  spaceBetween: 24,
+  loop: true,
+  navigation: {
+    nextEl: '.reviews-btn.swiper-button-next',
+    prevEl: '.reviews-btn.swiper-button-prev',
+  },
+  breakpoints: {
+    1200: {
+      slidesPerView: 3,
+
+      autoplay: {
+        delay: 250,
+        disableOnInteraction: false,
+      },
+    },
+  },
+});
 
 document.addEventListener('DOMContentLoaded', function () {
   let swiperBenefits, swiperGallery, swiperReviews;

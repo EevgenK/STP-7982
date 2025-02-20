@@ -75,7 +75,7 @@
   border: 2px solid $_main_text_color;
   top: 6%;
   @include media(desktop) {
-    display: none;
+    @include hidden-element;
   }
 }
 
