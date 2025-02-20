@@ -43,9 +43,8 @@
 }
 .gallery-btn.swiper-button-next,
 .gallery-btn.swiper-button-prev {
-  background: transparent;
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   color: $_main_text_color;
   border-radius: 8px;
   border: 2px solid $_main_text_color;
@@ -64,11 +63,12 @@
 /*COMMON SWIPER BUTTON STYLES*/
 .swiper-button-next,
 .swiper-button-prev {
+  background-color: transparent;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.72);
+  transition: all $transition;
   &::after {
-    transition: all $transition;
     @include media(desktop) {
-      transform: scale(1);
+      transform: scale(1); /*IMPROVE*/
     }
   }
   &:hover {
@@ -78,9 +78,7 @@
     background: transparent;
   }
 
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
+  @include retina {
     &::after {
       transform: scale(0.5);
     }

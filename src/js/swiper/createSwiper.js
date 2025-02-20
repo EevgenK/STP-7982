@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import 'swiper/scss/grid';
 
 document.addEventListener('DOMContentLoaded', function () {
-  let swiperBenefits, swiperGallery, swiper3;
+  let swiperBenefits, swiperGallery, swiperReviews;
 
   function initSwiper1() {
     if (window.innerWidth < 1200) {

@@ -1,0 +1,68 @@
+.reviews {
+  position: relative;
+  &-btn.swiper-button-next,
+  &-btn.swiper-button-prev {
+    width: 44px;
+    height: 44px;
+    color: $_main_text_color;
+    border-radius: 8px;
+    border: 2px solid $_main_text_color;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.72);
+    top: 5%;
+    transition: all $transition;
+    &::after {
+      transform: scale(0.5);
+    }
+  }
+  &-btn.swiper-button-next::after {
+    content: url('/img/png-icons/right_arrow@2x.png');
+  }
+  &-title {
+    margin-bottom: 32px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 24px;
+  }
+}
+.reviews-item {
+  border-radius: 8px;
+  padding: 24px;
+  border: 1px solid $_main_text_color;
+  box-sizing: border-box;
+  &_title {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.72);
+    margin-bottom: 8px;
+
+    @include media(desktop) {
+      font-size: 24px;
+
+      & span {
+        font-weight: 300;
+      }
+    }
+  }
+  &_text {
+    font-weight: 400;
+    font-size: 16px;
+    text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.72);
+    @include media(desktop) {
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+  }
+}
+.reviews-stars_list {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 8px;
+
+  .star > .star-icon {
+    width: 34px;
+    height: 32px;
+  }
+}
