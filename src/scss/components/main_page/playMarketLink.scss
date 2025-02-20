@@ -1,0 +1,38 @@
+.play-market-link {
+  outline: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 12px 0px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.72);
+  background-color: $_second_color;
+  transition: background-color $transition;
+  &:hover,
+  &:focus {
+    background-color: $_accent_btn_color;
+  }
+  &:active {
+    box-shadow: none;
+    .play-market-image {
+      filter: none;
+    }
+    .play-market-link-text {
+      text-shadow: none;
+    }
+  }
+  .play-market-image {
+    display: inline-block;
+    margin-right: 12px;
+  }
+  .google-image {
+    filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.72));
+    transition: filter $transition;
+  }
+  .play-market-link-text {
+    display: inline-block;
+    @include font(20, 24);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
+    transition: text-shadow $transition;
+  }
+}

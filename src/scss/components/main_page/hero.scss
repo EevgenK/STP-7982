@@ -1,0 +1,34 @@
+.hero.container {
+  padding: 224px 12px 81px 12px;
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      $_main_bg_color 100%
+    ),
+    url(/img/hero/hero-m.jpg);
+  @include retina {
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        $_main_bg_color 100%
+      ),
+      url(/img/hero/hero-m@2x.png);
+  }
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .hero-title {
+    font-style: italic;
+    font-weight: 500;
+    @include font(32, 36);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
+    margin-bottom: 16px;
+    .title-color {
+      color: #ff5800;
+    }
+  }
+  .hero-description {
+    margin-bottom: 24px;
+    @include font(16, 20);
+  }
+}
