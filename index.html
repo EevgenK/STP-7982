@@ -30,9 +30,9 @@
     />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script> -->
     <script type="module" crossorigin src="/STP-7982/commonHelpers3.js"></script>
-    <link rel="modulepreload" crossorigin href="/STP-7982/assets/vendor-d8d981d2.js">
+    <link rel="modulepreload" crossorigin href="/STP-7982/assets/vendor-b26f7c8d.js">
     <link rel="stylesheet" href="/STP-7982/assets/vendor-9d094e88.css">
-    <link rel="stylesheet" href="/STP-7982/assets/index-1724147f.css">
+    <link rel="stylesheet" href="/STP-7982/assets/index-6b4e9ab1.css">
   </head>
   <body>
     <header class="header">
@@ -81,13 +81,12 @@
 </section>
 
       <section class="benefits">
-  <div class="container">
-    <div class="swiper-wrap">
-      <button class="benefits-btn swiper-button-next"></button>
-      <h2 class="benefits-title">Benefits</h2>
-      <button class="benefits-btn swiper-button-prev"></button>
-    </div>
-    <div class="swiper mySwiper">
+  <div class="container benefits-container">
+    <button class="benefits-btn swiper-button-next"></button>
+    <h2 class="benefits-title">Benefits</h2>
+    <button class="benefits-btn swiper-button-prev"></button>
+
+    <div class="swiper swiperBenefits">
       <ul class="benefits-list swiper-wrapper">
         <li class="benefits-item swiper-slide">
           <h3 class="benefits-item_title">Competitive Gameplay</h3>
@@ -184,80 +183,104 @@
 </section>
 
       <section class="gallery">
-  <div class="container">
-    <h3 class="gallery-title">Gallery</h3>
-    <ul>
-      <li>
-        <picture>
-          <source
-            srcset="/STP-7982/assets/first_slide-976d7e66.jpg 1x, /STP-7982/assets/first_slide@2x-fe0fe9b7.jpg 2x"
-            loading="lazy"
-          />
-          <img
-            class="gallery-img"
-            src="/STP-7982/assets/first_slide-976d7e66.jpg"
-            alt="game image"
-            width="296px"
-          />
-        </picture>
-      </li>
-      <li>
-        <picture>
-          <source
-            srcset="/STP-7982/assets/second_slide-df9a7a91.jpg 1x, /STP-7982/assets/second_slide@2x-3c864be1.jpg 2x"
-            loading="lazy"
-          />
-          <img
-            class="gallery-img"
-            src="/STP-7982/assets/second_slide-df9a7a91.jpg"
-            alt="game image"
-            width="296px"
-          />
-        </picture>
-      </li>
-      <li>
-        <picture>
-          <source
-            srcset="/STP-7982/assets/third_slide-ebbf4dd5.jpg 1x, /STP-7982/assets/third_slide@2x-8c71b0ab.jpg 2x"
-            loading="lazy"
-          />
-          <img
-            class="gallery-img"
-            src="/STP-7982/assets/third_slide-ebbf4dd5.jpg"
-            alt="game image"
-            width="296px"
-          />
-        </picture>
-      </li>
-      <li>
-        <picture>
-          <source
-            srcset="/STP-7982/assets/fourth_slide-e34b5d94.jpg 1x, /STP-7982/assets/fourth_slide@2x-a1c0b367.jpg 2x"
-            loading="lazy"
-          />
-          <img
-            class="gallery-img"
-            src="/STP-7982/assets/fourth_slide-e34b5d94.jpg"
-            alt="game image"
-            width="296px"
-          />
-        </picture>
-      </li>
-      <li>
-        <picture>
-          <source
-            srcset="/STP-7982/assets/fifth_slide-6947c9b2.jpg 1x, /STP-7982/assets/fifth_slide@2x-2b399445.jpg 2x"
-            loading="lazy"
-          />
-          <img
-            class="gallery-img"
-            src="/STP-7982/assets/fifth_slide-6947c9b2.jpg"
-            alt="game image"
-            width="296px"
-          />
-        </picture>
-      </li>
-    </ul>
+  <div class="container gallery-container">
+    <button class="gallery-btn swiper-button-next"></button>
+    <h2 class="gallery-title">Gallery</h2>
+    <button class="gallery-btn swiper-button-prev"></button>
+
+    <div class="swiper swiperGallery">
+      <ul class="swiper-wrapper">
+        <li data-hash="slide6" class="swiper-slide">
+          <picture>
+            <source
+              srcset="/STP-7982/assets/sixth_slide-81bc6ffc.jpg 1x, /STP-7982/assets/sixth_slide@2x-c1d20538.jpg 2x"
+              loading="lazy"
+            />
+            <img
+              class="gallery-img"
+              src="/STP-7982/assets/sixth_slide-81bc6ffc.jpg"
+              alt="game image"
+              width="296px"
+            />
+          </picture>
+        </li>
+        <li data-hash="slide1" class="swiper-slide">
+          <picture>
+            <source
+              srcset="/STP-7982/assets/first_slide-976d7e66.jpg 1x, /STP-7982/assets/first_slide@2x-fe0fe9b7.jpg 2x"
+              loading="lazy"
+            />
+            <img
+              class="gallery-img"
+              src="/STP-7982/assets/first_slide-976d7e66.jpg"
+              alt="game image"
+              width="296px"
+            />
+          </picture>
+        </li>
+        <li data-hash="slide2" class="swiper-slide">
+          <picture>
+            <source
+              srcset="/STP-7982/assets/second_slide-df9a7a91.jpg 1x, /STP-7982/assets/second_slide@2x-3c864be1.jpg 2x"
+              loading="lazy"
+            />
+            <img
+              class="gallery-img"
+              src="/STP-7982/assets/second_slide-df9a7a91.jpg"
+              alt="game image"
+              width="296px"
+            />
+          </picture>
+        </li>
+        <li data-hash="slide3" class="swiper-slide">
+          <picture>
+            <source
+              srcset="/STP-7982/assets/third_slide-ebbf4dd5.jpg 1x, /STP-7982/assets/third_slide@2x-8c71b0ab.jpg 2x"
+              loading="lazy"
+            />
+            <img
+              class="gallery-img"
+              src="/STP-7982/assets/third_slide-ebbf4dd5.jpg"
+              alt="game image"
+              width="296px"
+            />
+          </picture>
+        </li>
+        <li data-hash="slide4" class="swiper-slide">
+          <picture>
+            <source
+              srcset="/STP-7982/assets/fourth_slide-e34b5d94.jpg 1x, /STP-7982/assets/fourth_slide@2x-a1c0b367.jpg 2x"
+              loading="lazy"
+            />
+            <img
+              class="gallery-img"
+              src="/STP-7982/assets/fourth_slide-e34b5d94.jpg"
+              alt="game image"
+              width="296px"
+            />
+          </picture>
+        </li>
+        <li data-hash="slide5" class="swiper-slide">
+          <picture>
+            <source
+              srcset="/STP-7982/assets/fifth_slide-da4e45b0.jpg 1x, /STP-7982/assets/fifth_slide@2x-2b399445.jpg 2x"
+              loading="lazy"
+            />
+            <img
+              class="gallery-img"
+              src="/STP-7982/assets/fifth_slide-da4e45b0.jpg"
+              alt="game image"
+              width="296px"
+            />
+          </picture>
+        </li>
+      </ul>
+
+      <!-- <div class="pagination-wrap"> -->
+
+      <!-- </div> -->
+    </div>
+    <div class="swiper-pagination"></div>
   </div>
 </section>
 
