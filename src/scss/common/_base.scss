@@ -10,5 +10,6 @@ section {
   }
   @include media(desktop) {
     width: $desktop;
+    padding: 0 60px;
   }
 }

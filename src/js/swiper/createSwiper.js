@@ -14,11 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!swiperBenefits) {
         swiperBenefits = new Swiper('.swiperBenefits', {
           modules: [Grid, Navigation],
+          spaceBetween: 12,
           speed: 250,
-          slidesPerView: 1.25,
+          slidesPerView: 1,
           grabCursor: true,
           grid: {
-            rows: 1.5,
+            rows: 2,
             fill: 'row',
           },
           navigation: {
