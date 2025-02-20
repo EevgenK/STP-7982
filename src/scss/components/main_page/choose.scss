@@ -25,45 +25,6 @@
       margin-bottom: 32px;
     }
 
-    .choose-link {
-      outline: transparent;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 8px;
-      padding: 12px 0px;
-      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.72);
-      background-color: $_second_color;
-      transition: background-color $transition;
-      &:hover,
-      &:focus {
-        background-color: $_accent_btn_color;
-      }
-      &:active {
-        box-shadow: none;
-        .choose-image {
-          filter: none;
-        }
-        .choose-link-text {
-          text-shadow: none;
-        }
-      }
-      .choose-image {
-        display: inline-block;
-        margin-right: 12px;
-      }
-      .google-image {
-        filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.72));
-        transition: filter $transition;
-      }
-      .choose-link-text {
-        display: inline-block;
-        @include font(20, 24);
-        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
-        transition: text-shadow $transition;
-      }
-    }
-
     @include media(desktop) {
     }
     .choose-title {
