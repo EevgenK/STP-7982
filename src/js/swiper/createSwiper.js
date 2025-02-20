@@ -29,7 +29,7 @@ const swiperReviews = new Swiper('.swiperReviews', {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  let swiperBenefits, swiperGallery, swiperReviews;
+  let swiperBenefits, swiperGallery, swiperRen;
 
   function initSwiper1() {
     if (window.innerWidth < 1200) {
