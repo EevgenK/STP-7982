@@ -1,9 +1,11 @@
 .container.benefits-container {
   position: relative;
-  background-image: url('../../../img/benefits/left_fire.png'),
-    url('../../../img/benefits/right_fire.png');
-  background-repeat: no-repeat, no-repeat;
-  background-position: top left, bottom right;
+  @include media(desktop) {
+    background-image: url('/img/benefits/left_fire.png'),
+      url('/img/benefits/right_fire.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+  }
 }
 .swiper {
   width: 100%;
@@ -80,21 +82,21 @@
 
 .benefits-btn.swiper-button-next {
   &::after {
-    content: url('../../../img/png-icons/right_arrow.png');
+    content: url('/img/png-icons/right_arrow.png');
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      content: url('../../../img/png-icons/right_arrow@2x.png');
+      content: url('/img/png-icons/right_arrow@2x.png');
     }
   }
 }
 .benefits-btn.swiper-button-prev {
   &::after {
-    content: url('../../../img/png-icons/left_arrow.png');
+    content: url('/img/png-icons/left_arrow.png');
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      content: url('../../../img/png-icons/left_arrow@2x.png');
+      content: url('/img/png-icons/left_arrow@2x.png');
     }
   }
 }

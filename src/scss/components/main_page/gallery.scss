@@ -88,9 +88,9 @@
 }
 .gallery-btn.swiper-button-next {
   &::after {
-    content: url('../../../img/png-icons/right_arrow.png');
+    content: url('/img/png-icons/right_arrow.png');
     @include retina {
-      content: url('../../../img/png-icons/right_arrow@2x.png');
+      content: url('/img/png-icons/right_arrow@2x.png');
     }
   }
   @include media(desktop) {
@@ -99,9 +99,9 @@
 }
 .gallery-btn.swiper-button-prev {
   &::after {
-    content: url('../../../img/png-icons/left_arrow.png');
+    content: url('/img/png-icons/left_arrow.png');
     @include retina {
-      content: url('../../../img/png-icons/left_arrow@2x.png');
+      content: url('/img/png-icons/left_arrow@2x.png');
     }
   }
   @include media(desktop) {
