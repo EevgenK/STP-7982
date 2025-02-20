@@ -8,7 +8,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-.swiper-slide {
+.benefits-list > .swiper-slide {
   font-size: 16px;
   background: transparent;
   border: 2px solid $_main_text_color;
@@ -39,15 +39,14 @@
 }
 .benefits-btn.swiper-button-next,
 .benefits-btn.swiper-button-prev {
+  &::after {
+    font-size: 22px;
+  }
   @include media(desktop) {
     display: none;
   }
 }
-/*add to sprite and use*/
-.benefits-btn.swiper-button-next::after,
-.benefits-btn.swiper-button-prev::after {
-  font-size: 22px;
-}
+
 .benefits {
   background: $_liner_bg;
   &-title {

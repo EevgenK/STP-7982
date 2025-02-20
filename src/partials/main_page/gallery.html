@@ -1,92 +1,101 @@
 <section class="gallery">
   <div class="container">
-    <h3 class="gallery-title">Gallery</h3>
-    <ul>
-      <li>
-        <picture>
-          <source
-            srcset="
-              ./img/gallery/first_slide.jpg    1x,
-              ./img/gallery/first_slide@2x.jpg 2x
-            "
-            loading="lazy"
-          />
-          <img
-            class="gallery-img"
-            src="./img/gallery/first_slide.jpg"
-            alt="game image"
-            width="296px"
-          />
-        </picture>
-      </li>
-      <li>
-        <picture>
-          <source
-            srcset="
-              ./img/gallery/second_slide.jpg    1x,
-              ./img/gallery/second_slide@2x.jpg 2x
-            "
-            loading="lazy"
-          />
-          <img
-            class="gallery-img"
-            src="./img/gallery/second_slide.jpg"
-            alt="game image"
-            width="296px"
-          />
-        </picture>
-      </li>
-      <li>
-        <picture>
-          <source
-            srcset="
-              ./img/gallery/third_slide.jpg    1x,
-              ./img/gallery/third_slide@2x.jpg 2x
-            "
-            loading="lazy"
-          />
-          <img
-            class="gallery-img"
-            src="./img/gallery/third_slide.jpg"
-            alt="game image"
-            width="296px"
-          />
-        </picture>
-      </li>
-      <li>
-        <picture>
-          <source
-            srcset="
-              ./img/gallery/fourth_slide.jpg    1x,
-              ./img/gallery/fourth_slide@2x.jpg 2x
-            "
-            loading="lazy"
-          />
-          <img
-            class="gallery-img"
-            src="./img/gallery/fourth_slide.jpg"
-            alt="game image"
-            width="296px"
-          />
-        </picture>
-      </li>
-      <li>
-        <picture>
-          <source
-            srcset="
-              ./img/gallery/fifth_slide.jpg    1x,
-              ./img/gallery/fifth_slide@2x.jpg 2x
-            "
-            loading="lazy"
-          />
-          <img
-            class="gallery-img"
-            src="./img/gallery/fifth_slide.jpg"
-            alt="game image"
-            width="296px"
-          />
-        </picture>
-      </li>
-    </ul>
+    <div class="swiper-wrap">
+      <button class="gallery-btn swiper-button-next"></button>
+      <h2 class="gallery-title">Gallery</h2>
+      <button class="gallery-btn swiper-button-prev"></button>
+    </div>
+
+    <div class="swiper swiperGallery">
+      <ul class="swiper-wrapper">
+        <li data-hash="slide1" class="swiper-slide">
+          <picture>
+            <source
+              srcset="
+                ./img/gallery/first_slide.jpg    1x,
+                ./img/gallery/first_slide@2x.jpg 2x
+              "
+              loading="lazy"
+            />
+            <img
+              class="gallery-img"
+              src="./img/gallery/first_slide.jpg"
+              alt="game image"
+              width="296px"
+            />
+          </picture>
+        </li>
+        <li data-hash="slide2" class="swiper-slide">
+          <picture>
+            <source
+              srcset="
+                ./img/gallery/second_slide.jpg    1x,
+                ./img/gallery/second_slide@2x.jpg 2x
+              "
+              loading="lazy"
+            />
+            <img
+              class="gallery-img"
+              src="./img/gallery/second_slide.jpg"
+              alt="game image"
+              width="296px"
+            />
+          </picture>
+        </li>
+        <li data-hash="slide3" class="swiper-slide">
+          <picture>
+            <source
+              srcset="
+                ./img/gallery/third_slide.jpg    1x,
+                ./img/gallery/third_slide@2x.jpg 2x
+              "
+              loading="lazy"
+            />
+            <img
+              class="gallery-img"
+              src="./img/gallery/third_slide.jpg"
+              alt="game image"
+              width="296px"
+            />
+          </picture>
+        </li>
+        <li data-hash="slide4" class="swiper-slide">
+          <picture>
+            <source
+              srcset="
+                ./img/gallery/fourth_slide.jpg    1x,
+                ./img/gallery/fourth_slide@2x.jpg 2x
+              "
+              loading="lazy"
+            />
+            <img
+              class="gallery-img"
+              src="./img/gallery/fourth_slide.jpg"
+              alt="game image"
+              width="296px"
+            />
+          </picture>
+        </li>
+        <li data-hash="slide5" class="swiper-slide">
+          <picture>
+            <source
+              srcset="
+                ./img/gallery/fifth_slide.jpg    1x,
+                ./img/gallery/fifth_slide@2x.jpg 2x
+              "
+              loading="lazy"
+            />
+            <img
+              class="gallery-img"
+              src="./img/gallery/fifth_slide.jpg"
+              alt="game image"
+              width="296px"
+            />
+          </picture>
+        </li>
+      </ul>
+
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
 </section>
