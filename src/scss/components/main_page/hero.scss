@@ -6,16 +6,37 @@
       $_main_bg_color 100%
     ),
     url(/img/hero/hero-m.jpg);
+  @include media(desktop) {
+    background-image: linear-gradient(
+        180deg,
+        rgba(35, 12, 0, 0) 0%,
+        $_main_bg_color 100%
+      ),
+      url(/img/hero/hero-d.jpg);
+  }
   @include retina {
     background-image: linear-gradient(
         180deg,
         rgba(0, 0, 0, 0) 0%,
         $_main_bg_color 100%
       ),
-      url(/img/hero/hero-m@2x.png);
+      url(/img/hero/hero-m@2x.jpg);
+    @include media(desktop) {
+      background-image: linear-gradient(
+          180deg,
+          rgba(35, 12, 0, 0) 0%,
+          $_main_bg_color 100%
+        ),
+        url(/img/hero/hero-d@2x.jpg);
+    }
   }
   background-repeat: no-repeat;
   background-size: contain;
+  @include media(desktop) {
+    text-align: start;
+    padding: 310px 543px 91px 59px;
+    background-size: cover;
+  }
 
   .hero-title {
     font-style: italic;
@@ -23,6 +44,10 @@
     @include font(32, 36);
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
     margin-bottom: 16px;
+    @include media(desktop) {
+      font-size: 48px;
+      line-height: 1.17;
+    }
     .title-color {
       color: #ff5800;
     }
@@ -30,5 +55,9 @@
   .hero-description {
     margin-bottom: 24px;
     @include font(16, 20);
+    @include media(desktop) {
+      margin-bottom: 56px;
+      @include font(24, 28);
+    }
   }
 }
