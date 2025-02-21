@@ -71,11 +71,13 @@
       transform: scale(1); /*IMPROVE*/
     }
   }
-  &:hover {
+  &:hover,
+  &:focus {
     background: rgba(255, 255, 255, 0.32);
   }
   &:active {
-    background: transparent;
+    background-color: transparent;
+    box-shadow: none;
   }
 
   @include retina {
