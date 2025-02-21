@@ -1,5 +1,11 @@
 import Swiper from 'swiper';
-import { Autoplay, Grid, Navigation, Pagination } from 'swiper/modules';
+import {
+  Autoplay,
+  Grid,
+  Navigation,
+  Pagination,
+  EffectCoverflow,
+} from 'swiper/modules';
 ('swiper');
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -7,114 +13,93 @@ import 'swiper/css/pagination';
 import 'swiper/scss/grid';
 
 const swiperReviews = new Swiper('.swiperReviews', {
-  modules: [Navigation, Autoplay],
+  modules: [Navigation, Autoplay, EffectCoverflow],
+  effect: 'coverflow',
+  centeredSlides: true,
+  slidesPerView: 'auto',
+
   speed: 250,
   grabCursor: true,
   spaceBetween: 24,
   loop: true,
+  autoplay: true,
   navigation: {
     nextEl: '.reviews-btn.swiper-button-next',
     prevEl: '.reviews-btn.swiper-button-prev',
   },
   breakpoints: {
+    320: {
+      slidesPerView: 1,
+      autoplay: false,
+    },
     1200: {
       slidesPerView: 3,
+      speed: 700,
+      coverflowEffect: {
+        rotate: 40,
+        stretch: 0,
+        depth: 80,
+        modifier: 1,
+        slideShadows: false,
+      },
 
       autoplay: {
-        delay: 250,
+        delay: 2000,
         disableOnInteraction: false,
       },
     },
   },
 });
+const swiperGallery = new Swiper('.swiperGallery', {
+  modules: [Navigation, Pagination],
+  speed: 250,
+  spaceBetween: 30,
+  grabCursor: true,
+  hashNavigation: {
+    watchState: true,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
 
-document.addEventListener('DOMContentLoaded', function () {
-  let swiperBenefits, swiperGallery, anotherSwip;
-
-  function initSwiper1() {
-    if (window.innerWidth < 1200) {
-      if (!swiperBenefits) {
-        swiperBenefits = new Swiper('.swiperBenefits', {
-          modules: [Grid, Navigation],
-          spaceBetween: 12,
-          speed: 250,
-          slidesPerView: 1,
-          grabCursor: true,
-          grid: {
-            rows: 2,
-            fill: 'row',
-          },
-          navigation: {
-            nextEl: '.benefits-btn.swiper-button-next',
-            prevEl: '.benefits-btn.swiper-button-prev',
-          },
-        });
-      }
-    } else {
-      if (swiperBenefits) {
-        swiperBenefits.destroy(true, true);
-        swiperBenefits = null;
-      }
-    }
-  }
-  function initSwiper2() {
-    if (!swiperGallery) {
-      swiperGallery = new Swiper('.swiperGallery', {
-        modules: [Navigation, Pagination],
+  navigation: {
+    nextEl: '.gallery-btn.swiper-button-next',
+    prevEl: '.gallery-btn.swiper-button-prev',
+  },
+});
+let swiperBenefits;
+let resizeTimeout;
+const initSwiper = () => {
+  if (window.innerWidth < 1200) {
+    if (!swiperBenefits) {
+      swiperBenefits = new Swiper('.swiperBenefits', {
+        modules: [Grid, Navigation],
+        spaceBetween: 12,
         speed: 250,
-        spaceBetween: 30,
+        slidesPerView: 1,
         grabCursor: true,
-        hashNavigation: {
-          watchState: true,
+        grid: {
+          rows: 2,
+          fill: 'row',
         },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-
         navigation: {
-          nextEl: '.gallery-btn.swiper-button-next',
-          prevEl: '.gallery-btn.swiper-button-prev',
+          nextEl: '.benefits-btn.swiper-button-next',
+          prevEl: '.benefits-btn.swiper-button-prev',
         },
       });
     }
+  } else {
+    if (swiperBenefits) {
+      swiperBenefits.destroy(true, true);
+      swiperBenefits = null;
+    }
   }
-
-  function handleResize() {
-    initSwiper1();
-    initSwiper2();
-  }
-
-  window.addEventListener('resize', handleResize);
-  handleResize();
+};
+initSwiper();
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(() => {
+    initSwiper();
+  }, 300);
 });
-
-// function initSwiper2() {
-//   if (swiper2) swiper2.destroy(true, true);
-
-//   swiper2 = new Swiper('.swiper-2', {
-//     slidesPerView: 3,
-//     spaceBetween: 20,
-//     pagination: {
-//       el: '.swiper-pagination-2',
-//       clickable: true,
-//     },
-//     centeredSlides: true,
-//     slideActiveClass: 'swiper-slide-active',
-//     on: {
-//       slideChange: function () {
-//         document
-//           .querySelectorAll('.swiper-2 .swiper-slide')
-//           .forEach(slide => {
-//             slide.style.transform = 'scale(1)';
-//           });
-//         document.querySelector(
-//           '.swiper-2 .swiper-slide-active'
-//         ).style.transform = 'scale(1.1)';
-//       },
-//     },
-//     autoplay: window.innerWidth < 1200 ? { delay: 2000 } : false,
-//   });
-// }
-
-// initSwiper3();
