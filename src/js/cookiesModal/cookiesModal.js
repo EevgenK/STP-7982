@@ -3,10 +3,19 @@ const refs = {
   acceptBtn: document.getElementById('accept-cookies'),
   declineBtn: document.getElementById('decline-cookies'),
 };
+const agreement = localStorage.getItem('cookiesAgreement');
+if (!agreement) {
+  setTimeout(() => {
+    refs.cookiesModal.style.display = 'block';
+    console.log('There is no any Agreement');
+  }, 1500);
+} else {
+  console.log(`Already exist Agreement: "${agreement}"`);
+}
 
 const onButtonClick = e => {
   const { id } = e.target;
-  console.log(id);
+
   switch (id) {
     case 'accept-cookies':
       localStorage.setItem('cookiesAgreement', 'accepted');

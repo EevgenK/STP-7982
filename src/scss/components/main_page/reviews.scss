@@ -1,5 +1,11 @@
+.container.reviews {
+  @include media(desktop) {
+    padding-top: 16px;
+  }
+}
 .reviews {
   position: relative;
+
   &-btn.swiper-button-next,
   &-btn.swiper-button-prev {
     width: 44px;
@@ -14,11 +20,26 @@
       transform: scale(0.5);
     }
     @include media(desktop) {
-      @include hidden-element;
+      width: 68px;
+      height: 68px;
+      top: 0;
     }
   }
-  &-btn.swiper-button-next::after {
-    content: url('/img/png-icons/right_arrow@2x.png');
+  &-btn.swiper-button-next {
+    @include media(desktop) {
+      right: 335px;
+    }
+    &::after {
+      content: url('/img/png-icons/right_arrow@2x.png');
+    }
+  }
+  &-btn.swiper-button-prev {
+    @include media(desktop) {
+      left: 335px;
+    }
+    &::after {
+      content: url('/img/png-icons/left_arrow@2x.png');
+    }
   }
   &-title {
     margin-bottom: 32px;
@@ -35,8 +56,8 @@
 }
 .swiper.swiperReviews {
   @include media(desktop) {
-    padding-bottom: 19px;
-    padding-top: 19px;
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
 }
 .reviews-item {
