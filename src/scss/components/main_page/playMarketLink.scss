@@ -8,6 +8,9 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.72);
   background-color: $_second_color;
   transition: background-color $transition;
+  @include media(desktop) {
+    max-width: 344px;
+  }
   &:hover,
   &:focus {
     background-color: $_accent_btn_color;
@@ -24,6 +27,10 @@
   .play-market-image {
     display: inline-block;
     margin-right: 12px;
+    @include media(desktop) {
+      width: 36px;
+      height: 40px;
+    }
   }
   .google-image {
     filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.72));
@@ -34,5 +41,8 @@
     @include font(20, 24);
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
     transition: text-shadow $transition;
+    @include media(desktop) {
+      @include font(24, 28);
+    }
   }
 }

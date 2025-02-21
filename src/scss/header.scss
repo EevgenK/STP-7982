@@ -6,17 +6,15 @@
   right: 0;
   text-align: end;
   scroll-margin-top: 80px;
-  /* FOR Header Desktop*/
-  background-color: rgba(4, 0, 35, 0.6);
-  box-shadow: 0 0 20px 5px rgba(4, 0, 35, 0.6);
 
   .header-container {
     padding: 0;
     padding-right: 20px;
+    background-color: rgba(4, 0, 35, 0.6);
+    box-shadow: 0 0 20px 5px rgba(4, 0, 35, 0.6);
     .burger-menu {
       vertical-align: middle;
       border: none;
-      // outline: transparent;
       padding: 0;
       background-color: transparent;
       .burger {
