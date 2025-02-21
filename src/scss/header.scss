@@ -1,17 +1,22 @@
 .header {
-  margin-top: 44px;
   position: fixed;
+  z-index: 999;
+  top: 44px;
   left: 0;
   right: 0;
   text-align: end;
   scroll-margin-top: 80px;
+  /* FOR Header Desktop*/
+  background-color: rgba(4, 0, 35, 0.6);
+  box-shadow: 0 0 20px 5px rgba(4, 0, 35, 0.6);
+
   .header-container {
     padding: 0;
     padding-right: 20px;
     .burger-menu {
       vertical-align: middle;
       border: none;
-      outline: transparent;
+      // outline: transparent;
       padding: 0;
       background-color: transparent;
       .burger {
@@ -26,7 +31,8 @@
       height: 100%;
       padding: 44px 12px 0 12px;
       background-color: $_main_bg_color;
-      z-index: 99;
+      z-index: 1000;
+      overflow: hidden;
       transform: translateX(100%);
       transition: transform $transition;
 

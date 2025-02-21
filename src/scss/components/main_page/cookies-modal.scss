@@ -1,12 +1,9 @@
 .cookies-section {
   z-index: 999;
   position: sticky;
-  top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
   display: none;
-
   overflow: hidden;
   background-color: $_main_bg_color;
 }
