@@ -16,3 +16,11 @@ section {
     padding: 0 60px;
   }
 }
+
+html {
+  scroll-padding-top: 80px;
+
+  @include media(desktop) {
+    scroll-padding-top: 63px;
+  }
+}

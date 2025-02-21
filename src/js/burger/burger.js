@@ -2,9 +2,32 @@ const refs = {
   mobileMenu: document.querySelector('.js-menu-container'),
   openMenuBtn: document.querySelector('.js-open-menu'),
   closeMenuBtn: document.querySelector('.js-close-menu'),
-  closeMenuLink: document.querySelectorAll('.header-link'),
-  playMarketImage: document.querySelector('.google-image'),
+  closeMenuLink: document.querySelectorAll('.js-header-link'),
 };
+window.addEventListener('resize', checkWidth);
+document.addEventListener('DOMContentLoaded', checkWidth);
+function addListeners() {
+  refs.openMenuBtn.addEventListener('click', toggleMenu);
+  refs.closeMenuBtn.addEventListener('click', toggleMenu);
+  refs.closeMenuLink.forEach(item =>
+    item.addEventListener('click', toggleMenu)
+  );
+}
+
+function removeListeners() {
+  refs.openMenuBtn.removeEventListener('click', toggleMenu);
+  refs.closeMenuBtn.removeEventListener('click', toggleMenu);
+  refs.closeMenuLink.forEach(item =>
+    item.removeEventListener('click', toggleMenu)
+  );
+}
+function checkWidth() {
+  if (window.innerWidth <= 1200) {
+    addListeners();
+  } else {
+    removeListeners();
+  }
+}
 
 function toggleMenu() {
   const isMenuOpen =
@@ -14,10 +37,8 @@ function toggleMenu() {
 
   if (refs.mobileMenu.classList.contains('is-open')) {
     document.body.classList.add('no-scroll');
-    refs.playMarketImage.classList.remove('google-image');
   } else {
     document.body.classList.remove('no-scroll');
-    refs.playMarketImage.classList.add('google-image');
   }
 }
 
