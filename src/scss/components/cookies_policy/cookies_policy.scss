@@ -1,6 +1,9 @@
 .policy-header {
-  margin-bottom: 52px;
-  padding: 20px 12px 20px 0px;
+  margin-bottom: 32px;
+  padding: 20px 0px;
+  @include media(desktop) {
+    margin-bottom: 56px;
+  }
 }
 .back-link {
   display: flex;
@@ -11,35 +14,38 @@
   }
 }
 .policy-main_title {
-  font-style: italic;
-  font-weight: 500;
-  font-size: 32px;
-  margin-bottom: 32px;
-  text-align: center;
-  & + p {
-    margin-bottom: 20px;
-  }
+  @include main-title-style;
 }
+
 .policy-second_title {
-  font-style: italic;
-  font-weight: 500;
-  font-size: 24px;
-  margin-bottom: 16px;
+  @include second-title-style;
 }
 .policy-third_title {
   font-style: italic;
   font-weight: 400;
   font-size: 20px;
   margin-bottom: 24px;
+  @include media(desktop) {
+    font-weight: 500;
+    font-size: 24px;
+  }
 }
 .policy-text {
-  margin-bottom: 24px;
+  @include text-style;
+  &.validity-period {
+    margin-top: 28px;
+  }
 }
+
 .policy-list {
-  list-style: disc;
-  margin-left: 20px;
-  margin-bottom: 24px;
+  @include list-style;
   &.link-list {
     color: $_links_color;
+    @include media(desktop) {
+      text-decoration: underline;
+    }
   }
+}
+.policy-text.last {
+  margin-bottom: 0px;
 }

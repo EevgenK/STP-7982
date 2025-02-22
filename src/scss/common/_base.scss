@@ -16,6 +16,23 @@ section {
     padding: 0 60px;
   }
 }
+.text-page_container {
+  margin: 0 auto;
+  padding: 0 12px;
+  border: 1px solid red;
+  @include media(mobile) {
+    width: $mobile;
+  }
+  @include media(desktop) {
+    width: $desktop;
+    padding: 0 59.5px;
+  }
+}
+.text-section {
+  @include media(desktop) {
+    margin-bottom: 56px;
+  }
+}
 
 html {
   scroll-padding-top: 80px;

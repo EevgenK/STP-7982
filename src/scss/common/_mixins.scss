@@ -31,13 +31,7 @@ screen types:
     }
   }
 }
-@mixin retina {
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    @content;
-  }
-}
+
 @mixin font($_fsz, $_lnh) {
   font-size: #{$_fsz}px;
 
@@ -56,4 +50,49 @@ screen types:
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+@mixin retina {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin text-style {
+  margin-bottom: 24px;
+  font-size: 20px;
+}
+
+@mixin list-style {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 24px;
+  @include media(desktop) {
+    font-size: 20px;
+  }
+}
+@mixin main-title-style {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 32px;
+  margin-bottom: 32px;
+  text-align: center;
+  @include media(desktop) {
+    margin-bottom: 44px;
+    font-size: 36px;
+  }
+}
+@mixin second-title-style {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 16px;
+  margin-top: 20px;
+
+  @include media(desktop) {
+    font-size: 32px;
+    margin-bottom: 28px;
+    margin-top: 32px;
+  }
 }
