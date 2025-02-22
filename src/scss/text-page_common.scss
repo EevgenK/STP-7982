@@ -1,0 +1,32 @@
+.text-page_container {
+  margin: 0 auto;
+  padding: 0 12px;
+  border: 1px solid red;
+  @include media(mobile) {
+    width: $mobile;
+  }
+  @include media(desktop) {
+    width: $desktop;
+    padding: 0 59.5px;
+  }
+}
+.text-page_header {
+  margin-bottom: 32px;
+  padding: 20px 0px;
+  @include media(desktop) {
+    margin-bottom: 56px;
+  }
+}
+.back-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .back-icon {
+    height: 32px;
+  }
+}
+.text-section {
+  @include media(desktop) {
+    margin-bottom: 56px;
+  }
+}

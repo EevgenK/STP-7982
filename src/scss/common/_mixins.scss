@@ -60,8 +60,17 @@ screen types:
 }
 
 @mixin text-style {
-  margin-bottom: 24px;
-  font-size: 20px;
+  margin-bottom: 16px;
+  &.validity-period {
+    margin-top: 28px;
+  }
+  &.last {
+    margin-bottom: 0px;
+  }
+  @include media(desktop) {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
 }
 
 @mixin list-style {
@@ -94,5 +103,16 @@ screen types:
     font-size: 32px;
     margin-bottom: 28px;
     margin-top: 32px;
+  }
+}
+@mixin third-title-style {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 16px;
+  @include media(desktop) {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 24px;
   }
 }

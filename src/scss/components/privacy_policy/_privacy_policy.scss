@@ -1,0 +1,25 @@
+.policy-main_title {
+  @include main-title-style;
+}
+
+.policy-second_title {
+  @include second-title-style;
+}
+.policy-third_title {
+  @include third-title-style;
+  margin-bottom: 24px;
+}
+.policy-text {
+  @include text-style;
+  margin-bottom: 24px;
+}
+
+.policy-list {
+  @include list-style;
+  &.link-list {
+    color: $_links_color;
+    @include media(desktop) {
+      text-decoration: underline;
+    }
+  }
+}

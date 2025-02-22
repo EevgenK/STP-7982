@@ -1,51 +1,51 @@
-.policy-header {
-  margin-bottom: 32px;
-  padding: 20px 0px;
-  @include media(desktop) {
-    margin-bottom: 56px;
-  }
-}
-.back-link {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  .back-icon {
-    height: 32px;
-  }
-}
-.policy-main_title {
+.cookies-main_title {
   @include main-title-style;
 }
-
-.policy-second_title {
+.cookies-second_title {
   @include second-title-style;
 }
-.policy-third_title {
+.cookies-third_title {
+  @include third-title-style;
+}
+.cookies-fourth_title {
   font-style: italic;
   font-weight: 400;
-  font-size: 20px;
-  margin-bottom: 24px;
+  font-size: 16px;
+  margin-bottom: 20px;
   @include media(desktop) {
+    font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
   }
 }
-.policy-text {
-  @include text-style;
+.cookies-text {
+  margin-bottom: 16px;
   &.validity-period {
-    margin-top: 28px;
+    margin-top: 20px;
+  }
+  &.last {
+    margin-bottom: 0px;
+  }
+  @include media(desktop) {
+    margin-bottom: 24px;
   }
 }
-
-.policy-list {
-  @include list-style;
-  &.link-list {
-    color: $_links_color;
+.cookies-policy_list {
+  margin-bottom: 20px;
+  list-style: disc;
+  margin-left: 20px;
+  .cookies-policy_text span {
+    font-weight: 500;
+  }
+}
+.cookies-types_list {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 16px;
+  & p {
+    margin-left: -20px;
     @include media(desktop) {
-      text-decoration: underline;
+      margin-bottom: 28px;
     }
   }
-}
-.policy-text.last {
-  margin-bottom: 0px;
 }

@@ -1,0 +1,21 @@
+.conditions-main_title {
+  @include main-title-style;
+}
+.conditions-second_title {
+  @include second-title-style;
+}
+
+.conditions-text {
+  @include text-style;
+}
+.conditions-list {
+  @include list-style;
+  margin-bottom: 16px;
+  &.link-list {
+    color: $_links_color;
+    @include media(desktop) {
+      text-decoration: underline;
+      margin-bottom: 24px;
+    }
+  }
+}
