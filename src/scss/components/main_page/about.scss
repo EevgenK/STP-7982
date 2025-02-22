@@ -18,10 +18,29 @@
       font-weight: 400;
       @include font(16, 20);
       color: var(--white);
+      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
     }
   }
 
   @include media(desktop) {
-    padding: 0px 236px;
+    .about-title {
+      @include font(36, 40);
+      margin-bottom: 44px;
+    }
+    .about-box {
+      display: flex;
+      column-gap: 24px;
+      &:not(:last-child) {
+        margin-bottom: 44px;
+      }
+      .about-text {
+        padding: 33px 0;
+        display: inline-block;
+        @include font(24, 28);
+        &:last-child {
+          padding: 102px 0;
+        }
+      }
+    }
   }
 }
