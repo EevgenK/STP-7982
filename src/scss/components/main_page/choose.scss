@@ -23,12 +23,15 @@
       @include font(16, 20);
       text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
       margin-bottom: 32px;
+      @include media(desktop) {
+        font-size: 24px;
+        /*words have different font - need to do*/
+      }
     }
 
-    @include media(desktop) {
-    }
     .choose-title {
       @include media(desktop) {
+        font-size: 36px;
       }
     }
   }
