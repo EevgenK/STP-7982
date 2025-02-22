@@ -1,9 +1,25 @@
+.container.footer {
+  margin-bottom: 20px;
+  @include media(desktop) {
+    margin-bottom: 22px;
+  }
+}
 .footer-list {
   text-align: center;
   margin-bottom: 16px;
-
   .footer-list-link {
     @include font(16, 20);
+  }
+  @include media(desktop) {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    font-size: 20px;
+
+    & li:not(:last-child)::after {
+      content: '|';
+      margin-left: 12px;
+    }
   }
 }
 
@@ -14,5 +30,13 @@
   @include font(14, 16);
   .bold-text {
     font-weight: 500;
+  }
+  @include media(desktop) {
+    max-width: 100%;
+    & span::after {
+      content: '|';
+      margin-left: 12px;
+      margin-right: 12px;
+    }
   }
 }

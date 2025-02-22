@@ -22,10 +22,12 @@
     @include media(desktop) {
       width: 68px;
       height: 68px;
-      top: 0;
+      top: 4%;
+      transform: translateY(-4%);
     }
   }
   &-btn.swiper-button-next {
+    right: 42px;
     @include media(desktop) {
       right: 335px;
     }
@@ -34,6 +36,7 @@
     }
   }
   &-btn.swiper-button-prev {
+    left: 42px;
     @include media(desktop) {
       left: 335px;
     }
@@ -43,6 +46,7 @@
   }
   &-title {
     margin-bottom: 32px;
+    margin-top: 10px;
     text-align: center;
     font-style: italic;
     font-weight: 500;
