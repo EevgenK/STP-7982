@@ -13,8 +13,6 @@
 
   .header-container {
     padding: 0 20px 0 0;
-    // background-color: rgba(4, 0, 35, 0.6);
-    // box-shadow: 0 0 20px 5px rgba(4, 0, 35, 0.6);
     @include media(desktop) {
       padding: 0;
       background-color: transparent;
@@ -57,7 +55,7 @@
       }
       .nav-list {
         text-align: center;
-        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
+        text-shadow: $_text_shadow;
         @include font(20, 24);
         color: $_main_text_color;
 
