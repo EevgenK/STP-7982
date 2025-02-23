@@ -1,3 +1,4 @@
+import { debounce } from '../about/about';
 import Swiper from 'swiper';
 import { Grid, Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 ('swiper');
@@ -64,7 +65,7 @@ const swiperGallery = new Swiper('.swiperGallery', {
   },
 });
 let swiperBenefits;
-let resizeTimeout;
+
 const initSwiper = () => {
   if (window.innerWidth < 1200) {
     if (!swiperBenefits) {
@@ -91,10 +92,5 @@ const initSwiper = () => {
     }
   }
 };
-initSwiper();
-window.addEventListener('resize', () => {
-  clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(() => {
-    initSwiper();
-  }, 300);
-});
+
+window.addEventListener('resize', debounce(initSwiper, 300));

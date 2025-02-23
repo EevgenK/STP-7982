@@ -30,7 +30,7 @@ function restoreImagesForMobile() {
   }
 }
 
-function debounce(func, wait) {
+export function debounce(func, wait) {
   let timeout;
   return function () {
     clearTimeout(timeout);
