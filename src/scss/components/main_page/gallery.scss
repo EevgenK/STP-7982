@@ -8,7 +8,7 @@
     margin-top: 10px;
     margin-bottom: 32px;
     text-align: center;
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
+    text-shadow: $_text_shadow;
     @include media(desktop) {
       font-size: 36px;
     }

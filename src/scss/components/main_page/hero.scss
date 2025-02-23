@@ -42,7 +42,7 @@
     font-style: italic;
     font-weight: 500;
     @include font(32, 36);
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
+    text-shadow: $_text_shadow;
     margin-bottom: 16px;
     @include media(desktop) {
       font-size: 48px;

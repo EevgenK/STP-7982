@@ -7,31 +7,89 @@
   );
 
   .container.choose-container {
-    background-image: url(/img/choose/flag.svg), url(/img/choose/flag-r.svg);
-    background-repeat: no-repeat, no-repeat;
-    background-position: center left, center right;
+    position: relative;
+    z-index: 2;
+    &::before,
+    &::after {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      width: 62%;
+      height: 89%;
+      background-image: url(/img/choose/flag-m.png);
+      @include retina {
+        background-image: url(/img/choose/flag-m@2x.png);
+      }
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &::before {
+      left: 0;
+      background-position: center right;
+    }
+    &::after {
+      right: 0;
+      background-position: center right;
+      transform: scaleX(-1);
+    }
     .choose-title {
       font-style: italic;
       font-weight: 500;
       @include font(24, 28);
       text-align: center;
       margin-bottom: 24px;
-      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
+      text-shadow: $_text_shadow;
     }
 
     .choose-text {
       @include font(16, 20);
-      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
+      text-shadow: $_text_shadow;
       margin-bottom: 32px;
-      @include media(desktop) {
-        font-size: 24px;
-        /*words have different font - need to do*/
+      .choose-bold-text {
+        font-weight: 500;
       }
     }
+  }
 
-    .choose-title {
-      @include media(desktop) {
-        font-size: 36px;
+  @include media(desktop) {
+    .container.choose-container {
+      padding-top: 86px;
+      padding-bottom: 86px;
+      &::before,
+      &::after {
+        max-width: 540px;
+        width: 100%;
+        height: 100%;
+        background-image: url(/img/choose/flag-d.png);
+        @include retina {
+          background-image: url(/img/choose/flag-d@2x.png);
+        }
+      }
+      &::after {
+        left: 42%;
+        right: auto;
+      }
+      &::before {
+        right: 42%;
+        left: auto;
+        background-position-x: right;
+      }
+      & .play-market-link {
+        margin: 0 auto;
+      }
+      .choose-title {
+        @include font(36, 40);
+        margin-bottom: 40px;
+      }
+
+      .choose-text {
+        @include font(24, 28);
+        margin-bottom: 56px;
+        .choose-bold-text {
+          font-weight: 400;
+          @include font(32, 36);
+        }
       }
     }
   }

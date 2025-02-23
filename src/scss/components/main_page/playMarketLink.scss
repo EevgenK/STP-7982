@@ -4,13 +4,10 @@
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  padding: 12px 0px;
+  padding: 10px 0px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.72);
   background-color: $_second_color;
   transition: background-color $transition;
-  @include media(desktop) {
-    max-width: 344px;
-  }
   &:hover,
   &:focus {
     background-color: $_accent_btn_color;
@@ -27,10 +24,6 @@
   .play-market-image {
     display: inline-block;
     margin-right: 12px;
-    @include media(desktop) {
-      width: 36px;
-      height: 40px;
-    }
   }
   .google-image {
     filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.72));
@@ -39,9 +32,19 @@
   .play-market-link-text {
     display: inline-block;
     @include font(20, 24);
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
+    text-shadow: $_text_shadow;
     transition: text-shadow $transition;
-    @include media(desktop) {
+  }
+  @include media(desktop) {
+    padding: 16px 0;
+    max-width: 344px;
+
+    .play-market-image {
+      width: 36px;
+      height: 40px;
+    }
+
+    .play-market-link-text {
       @include font(24, 28);
     }
   }

@@ -6,7 +6,7 @@
     @include font(24, 28);
     text-align: center;
     color: var(--white);
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
+    text-shadow: $_text_shadow;
     margin-bottom: 16px;
   }
   .about-box {
@@ -18,7 +18,7 @@
       font-weight: 400;
       @include font(16, 20);
       color: var(--white);
-      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.72);
+      text-shadow: $_text_shadow;
     }
   }
 
