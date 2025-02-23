@@ -85,7 +85,10 @@
     height: 16px;
   }
   &.swiper-pagination-bullet-active {
-    transform: scaleX(2);
     background-color: $_main_text_color;
+    width: 16px;
+    @include media(desktop) {
+      width: 36px;
+    }
   }
 }
