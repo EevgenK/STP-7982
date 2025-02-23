@@ -74,7 +74,7 @@ screen types:
 }
 
 @mixin list-style {
-  list-style: disc;
+  list-style-type: disc;
   margin-left: 20px;
   margin-bottom: 24px;
   @include media(desktop) {
