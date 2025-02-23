@@ -6,8 +6,8 @@
     top: 6%;
     transition: all $transition;
     @include media(desktop) {
-      top: 12%;
-      transform: translateY(-12%);
+      top: 0%;
+      transform: translateY(0%);
     }
   }
   &-btn.swiper-button-next {
