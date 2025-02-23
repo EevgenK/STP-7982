@@ -25,9 +25,9 @@
     />
     
     <script type="module" crossorigin src="/STP-7982/commonHelpers3.js"></script>
-    <link rel="modulepreload" crossorigin href="/STP-7982/assets/vendor-1e22ef30.js">
-    <link rel="stylesheet" href="/STP-7982/assets/vendor-9d094e88.css">
-    <link rel="stylesheet" href="/STP-7982/assets/styles-bcc1093a.css">
+    <link rel="modulepreload" crossorigin href="/STP-7982/assets/vendor-c2df4a2b.js">
+    <link rel="stylesheet" href="/STP-7982/assets/vendor-94696133.css">
+    <link rel="stylesheet" href="/STP-7982/assets/styles-df9d01e2.css">
   </head>
   <body>
     <header class="header">
@@ -168,7 +168,7 @@
       <section id="about">
   <div class="container about">
     <h2 class="about-title">About the Game</h2>
-    <div class="about-box">
+    <div class="about-box js-about-box-first">
       <p class="about-text">
         Trail Boss BMX is an exhilarating physics-based BMX game where players
         tackle daring trails, execute mind-blowing tricks, and push their limits
@@ -178,15 +178,28 @@
         controls and realistic physics, every move counts in your quest to
         become the ultimate BMX trail boss!
       </p>
-      <picture>
+      <picture class="js-first-image">
+        <source
+          srcset="
+            ../../img/about/iPhone14-d.png    1x,
+            ../../img/about/iPhone14-d@2x.png 2x
+          "
+          media="(min-width: 1200px)"
+          width="436px"
+        />
         <source
           srcset="/STP-7982/assets/iPhone14-c87fa792.png 1x, /STP-7982/assets/iPhone14@2x-89841ea0.png 2x"
           loading="lazy"
         />
-        <img src="/STP-7982/assets/iPhone14-c87fa792.png" alt width="296px" />
+        <img
+          class
+          src="/STP-7982/assets/iPhone14-c87fa792.png"
+          alt="screenshot from game and iPhone 15"
+          width="296px"
+        />
       </picture>
     </div>
-    <div class="about-box">
+    <div class="about-box js-about-box-second">
       <p class="about-text">
         Ride through forests, urban landscapes, and extreme courses, mastering
         tricks like backflips and grinds. Customize your bike, compete for high
@@ -194,12 +207,25 @@
         Whether you're a casual rider or a BMX pro, Trail Boss BMX delivers
         high-flying action!
       </p>
-      <picture
-        ><source
+      <picture class="js-second-image">
+        <source
+          srcset="
+            ../../img/about/iPhone15-d.png    1x,
+            ../../img/about/iPhone15-d@2x.png 2x
+          "
+          media="(min-width: 1200px)"
+          loading="lazy"
+          width="436px"
+        />
+        <source
           srcset="/STP-7982/assets/iPhone15-1e14c004.png 1x, /STP-7982/assets/iPhone15@2x-8c6dfa34.png 2x"
           loading="lazy"
         />
-        <img src="/STP-7982/assets/iPhone15-1e14c004.png" alt width="296px" />
+        <img
+          src="/STP-7982/assets/iPhone15-1e14c004.png"
+          alt="screenshot from game and iPhone 15"
+          width="296px"
+        />
       </picture>
     </div>
   </div>
