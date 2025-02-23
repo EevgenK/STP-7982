@@ -53,9 +53,10 @@
   }
 
   @include media(desktop) {
+    padding: 0;
     .container.choose-container {
-      padding-top: 86px;
-      padding-bottom: 86px;
+      padding-top: 81px;
+      padding-bottom: 81px;
       &::before,
       &::after {
         max-width: 540px;
