@@ -22,16 +22,17 @@
   padding-bottom: 30px;
 
   @include media(desktop) {
-    padding-bottom: 108px; /*check later*/
+    padding-bottom: 108px;
   }
 }
 .swiper.swiperGallery {
   border-radius: 8px;
   width: 296px;
   height: 185px;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.72);
+  box-shadow: $_box_shadow;
   border: 1px solid $_main_text_color;
   object-fit: contain;
+  box-sizing: content-box;
   @include media(desktop) {
     width: 712px;
     height: 445px;
@@ -44,68 +45,19 @@
 }
 .gallery-btn.swiper-button-next,
 .gallery-btn.swiper-button-prev {
-  width: 44px;
-  height: 44px;
-  color: $_main_text_color;
-  border-radius: 8px;
-  border: 2px solid $_main_text_color;
   top: 13%;
   transform: translateY(-13%);
-  text-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.72);
-
+  transition: transform $transition;
   @include media(desktop) {
-    width: 68px;
-    height: 68px;
     top: 50%;
-    &::after {
-      transform: scale(1);
-    }
-  }
-}
-/*COMMON SWIPER BUTTON STYLES*/
-.swiper-button-next,
-.swiper-button-prev {
-  background-color: transparent;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.72);
-  transition: all $transition;
-  &::after {
-    @include media(desktop) {
-      transform: scale(1); /*IMPROVE*/
-    }
-  }
-  &:hover,
-  &:focus {
-    background: rgba(255, 255, 255, 0.32);
-  }
-  &:active {
-    background-color: transparent;
-    box-shadow: none;
-  }
-
-  @include retina {
-    &::after {
-      transform: scale(0.5);
-    }
   }
 }
 .gallery-btn.swiper-button-next {
-  &::after {
-    content: url('/img/png-icons/right_arrow.png');
-    @include retina {
-      content: url('/img/png-icons/right_arrow@2x.png');
-    }
-  }
   @include media(desktop) {
     right: 152px;
   }
 }
 .gallery-btn.swiper-button-prev {
-  &::after {
-    content: url('/img/png-icons/left_arrow.png');
-    @include retina {
-      content: url('/img/png-icons/left_arrow@2x.png');
-    }
-  }
   @include media(desktop) {
     left: 152px;
   }

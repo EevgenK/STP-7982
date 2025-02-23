@@ -1,0 +1,44 @@
+.container > .swiper-button-next,
+.container > .swiper-button-prev {
+  border-radius: 8px;
+  border: 2px solid $_main_text_color;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  box-shadow: $_box_shadow;
+  transition: all $transition;
+  @include media(desktop) {
+    width: 68px;
+    height: 68px;
+  }
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 25px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: drop-shadow($_text_shadow);
+    transition: all $transition;
+    &:active {
+      filter: none;
+    }
+  }
+  &:hover,
+  &:focus {
+    background: $_accent_btn_second_color;
+  }
+  &:active {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+
+.container > .swiper-button-next::after {
+  background-image: url('/img/png-icons/right_arrow@2x.png');
+}
+.container > .swiper-button-prev::after {
+  background-image: url('/img/png-icons/left_arrow@2x.png');
+}

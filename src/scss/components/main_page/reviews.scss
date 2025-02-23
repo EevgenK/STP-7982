@@ -1,29 +1,13 @@
-.container.reviews {
-  @include media(desktop) {
-    padding-top: 16px;
-  }
-}
 .reviews {
   position: relative;
 
   &-btn.swiper-button-next,
   &-btn.swiper-button-prev {
-    width: 44px;
-    height: 44px;
-    color: $_main_text_color;
-    border-radius: 8px;
-    border: 2px solid $_main_text_color;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.72);
     top: 6%;
     transition: all $transition;
-    &::after {
-      transform: scale(0.5);
-    }
     @include media(desktop) {
-      width: 68px;
-      height: 68px;
-      top: 4.5%;
-      transform: translateY(-4.5%);
+      top: 12%;
+      transform: translateY(-12%);
     }
   }
   &-btn.swiper-button-next {
@@ -31,17 +15,11 @@
     @include media(desktop) {
       right: 335px;
     }
-    &::after {
-      content: url('/img/png-icons/right_arrow@2x.png');
-    }
   }
   &-btn.swiper-button-prev {
     left: 42px;
     @include media(desktop) {
       left: 335px;
-    }
-    &::after {
-      content: url('/img/png-icons/left_arrow@2x.png');
     }
   }
   &-title {
@@ -54,7 +32,7 @@
     text-shadow: $_text_shadow;
     @include media(desktop) {
       font-size: 36px;
-      margin-bottom: 40px;
+      margin-bottom: 53px;
     }
   }
 }
@@ -73,7 +51,10 @@
   transition: all $transition;
   @include media(desktop) {
     &.swiper-slide {
+      width: 344px;
       height: 400px;
+      scale: 1;
+      transition: scale 3000s ease-out;
     }
     &.swiper-slide-active {
       border: 1px solid $_main_text_color;
