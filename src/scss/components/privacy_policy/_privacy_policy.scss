@@ -23,3 +23,8 @@
     }
   }
 }
+@include media(desktop) {
+  .line-break {
+    display: none;
+  }
+}
