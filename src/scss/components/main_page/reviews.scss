@@ -14,7 +14,7 @@
     border-radius: 8px;
     border: 2px solid $_main_text_color;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.72);
-    top: 5%;
+    top: 6%;
     transition: all $transition;
     &::after {
       transform: scale(0.5);
@@ -22,8 +22,8 @@
     @include media(desktop) {
       width: 68px;
       height: 68px;
-      top: 4%;
-      transform: translateY(-4%);
+      top: 4.5%;
+      transform: translateY(-4.5%);
     }
   }
   &-btn.swiper-button-next {
@@ -46,7 +46,7 @@
   }
   &-title {
     margin-bottom: 32px;
-    margin-top: 10px;
+    // margin-top: 10px;
     text-align: center;
     font-style: italic;
     font-weight: 500;

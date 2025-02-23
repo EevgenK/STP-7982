@@ -15,6 +15,7 @@
   padding: 20px 0px;
   @include media(desktop) {
     margin-bottom: 56px;
+    padding-left: 60px;
   }
 }
 .back-link {
@@ -23,6 +24,7 @@
   align-items: center;
   .back-icon {
     height: 32px;
+    min-width: fit-content;
   }
 }
 .text-section {

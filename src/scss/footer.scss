@@ -1,6 +1,8 @@
 .container.footer {
   margin-bottom: 20px;
+  padding-bottom: 0px;
   @include media(desktop) {
+    padding-top: 20px;
     margin-bottom: 22px;
   }
 }

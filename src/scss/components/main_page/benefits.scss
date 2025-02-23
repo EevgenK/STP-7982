@@ -4,7 +4,7 @@
     background-image: url('/img/benefits/left_fire.png'),
       url('/img/benefits/right_fire.png');
     background-repeat: no-repeat, no-repeat;
-    background-position: top left, bottom right;
+    background-position: top 132px left 60px, bottom right 60px;
   }
 }
 .swiper {
@@ -26,9 +26,10 @@
     text-align: center;
     text-shadow: $_text_shadow;
     margin-bottom: 20px;
-    margin-top: 4px;
+    // margin-top: 4px;
     @include media(desktop) {
       font-size: 36px;
+      margin-bottom: 44px;
     }
   }
   &-list {
@@ -74,7 +75,8 @@
   color: $_main_text_color;
   border-radius: 8px;
   border: 2px solid $_main_text_color;
-  top: 6%;
+  top: 10%;
+  transform: translateY(-10%);
   @include media(desktop) {
     @include hidden-element;
   }
