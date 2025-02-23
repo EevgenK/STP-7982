@@ -68,37 +68,13 @@
   }
 }
 
-.benefits-btn.swiper-button-next,
-.benefits-btn.swiper-button-prev {
+.container > .benefits-btn.swiper-button-next,
+.container > .benefits-btn.swiper-button-prev {
   width: 36px;
   height: 36px;
-  color: $_main_text_color;
-  border-radius: 8px;
-  border: 2px solid $_main_text_color;
   top: 10%;
   transform: translateY(-10%);
   @include media(desktop) {
     @include hidden-element;
-  }
-}
-
-.benefits-btn.swiper-button-next {
-  &::after {
-    content: url('/img/png-icons/right_arrow.png');
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      content: url('/img/png-icons/right_arrow@2x.png');
-    }
-  }
-}
-.benefits-btn.swiper-button-prev {
-  &::after {
-    content: url('/img/png-icons/left_arrow.png');
-    @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-      content: url('/img/png-icons/left_arrow@2x.png');
-    }
   }
 }
