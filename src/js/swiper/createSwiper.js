@@ -95,5 +95,5 @@ const initSwiper = () => {
     }
   }
 };
-
-window.addEventListener('resize', debounce(initSwiper, 300));
+document.addEventListener('DOMContentLoaded', initSwiper);
+window.addEventListener('resize', debounce(initSwiper, 100));
