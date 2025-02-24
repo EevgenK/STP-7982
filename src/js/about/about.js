@@ -1,3 +1,5 @@
+import { debounce } from '../utils';
+
 const refs = {
   firstBox: document.querySelector('.js-about-box-first'),
   secondBox: document.querySelector('.js-about-box-second'),
@@ -28,12 +30,4 @@ function restoreImagesForMobile() {
     refs.firstBox.replaceChild(refs.firstImage, refs.secondImage);
     refs.secondBox.insertBefore(refs.secondImage, null);
   }
-}
-
-function debounce(func, wait) {
-  let timeout;
-  return function () {
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func.apply(this, arguments), wait);
-  };
 }

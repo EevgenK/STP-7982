@@ -1,28 +1,29 @@
 import Swiper from 'swiper';
 import {
-  Autoplay,
   Grid,
   Navigation,
   Pagination,
   EffectCoverflow,
+  EffectFlip,
 } from 'swiper/modules';
 ('swiper');
+import { debounce } from '../utils';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/scss/grid';
+import 'swiper/scss/effect-flip';
+import 'swiper/scss/effect-coverflow';
 
 const swiperReviews = new Swiper('.swiperReviews', {
-  modules: [Navigation, Autoplay, EffectCoverflow],
+  modules: [Navigation, EffectCoverflow],
   effect: 'coverflow',
   centeredSlides: true,
   slidesPerView: 'auto',
-
   speed: 250,
   grabCursor: true,
   spaceBetween: 24,
-  loop: true,
-  autoplay: true,
+
   navigation: {
     nextEl: '.reviews-btn.swiper-button-next',
     prevEl: '.reviews-btn.swiper-button-prev',
@@ -30,30 +31,28 @@ const swiperReviews = new Swiper('.swiperReviews', {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      autoplay: false,
+      loop: false,
+      coverflowEffect: { rotate: 0, depth: 0, slideShadows: false },
     },
     1200: {
       slidesPerView: 3,
-      speed: 700,
+      speed: 850,
+      loop: true,
       coverflowEffect: {
         rotate: 40,
         stretch: 0,
         depth: 80,
         modifier: 1,
+        scale: 0.9,
         slideShadows: false,
-      },
-
-      autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
       },
     },
   },
 });
 const swiperGallery = new Swiper('.swiperGallery', {
-  modules: [Navigation, Pagination],
-  speed: 250,
-  spaceBetween: 30,
+  modules: [Navigation, Pagination, EffectFlip],
+  effect: 'flip',
+  speed: 850,
   grabCursor: true,
   hashNavigation: {
     watchState: true,
@@ -69,7 +68,7 @@ const swiperGallery = new Swiper('.swiperGallery', {
   },
 });
 let swiperBenefits;
-let resizeTimeout;
+
 const initSwiper = () => {
   if (window.innerWidth < 1200) {
     if (!swiperBenefits) {
@@ -96,10 +95,5 @@ const initSwiper = () => {
     }
   }
 };
-initSwiper();
-window.addEventListener('resize', () => {
-  clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(() => {
-    initSwiper();
-  }, 300);
-});
+document.addEventListener('DOMContentLoaded', initSwiper);
+window.addEventListener('resize', debounce(initSwiper, 100));

@@ -1,8 +1,14 @@
 <section id="gallery" class="gallery">
   <div class="container gallery-container">
-    <button class="gallery-btn swiper-button-next"></button>
+    <button
+      class="gallery-btn swiper-button-next"
+      aria-label="Next slide"
+    ></button>
     <h2 class="gallery-title">Gallery</h2>
-    <button class="gallery-btn swiper-button-prev"></button>
+    <button
+      class="gallery-btn swiper-button-prev"
+      aria-label="Next slide"
+    ></button>
 
     <div class="swiper swiperGallery">
       <ul class="swiper-wrapper">
@@ -13,13 +19,14 @@
                 ./img/gallery/sixth_slide.jpg    1x,
                 ./img/gallery/sixth_slide@2x.jpg 2x
               "
-              loading="lazy"
+              media="(min-width: 1200px)"
             />
             <img
               class="gallery-img"
               src="./img/gallery/sixth_slide.jpg"
               alt="game image"
-              width="296px"
+              width="296"
+              loading="lazy"
             />
           </picture>
         </li>
@@ -30,13 +37,14 @@
                 ./img/gallery/first_slide.jpg    1x,
                 ./img/gallery/first_slide@2x.jpg 2x
               "
-              loading="lazy"
+              media="(min-width: 1200px)"
             />
             <img
               class="gallery-img"
               src="./img/gallery/first_slide.jpg"
               alt="game image"
-              width="296px"
+              width="296"
+              loading="lazy"
             />
           </picture>
         </li>
@@ -47,13 +55,14 @@
                 ./img/gallery/second_slide.jpg    1x,
                 ./img/gallery/second_slide@2x.jpg 2x
               "
-              loading="lazy"
+              media="(min-width: 1200px)"
             />
             <img
               class="gallery-img"
               src="./img/gallery/second_slide.jpg"
               alt="game image"
-              width="296px"
+              width="296"
+              loading="lazy"
             />
           </picture>
         </li>
@@ -64,13 +73,14 @@
                 ./img/gallery/third_slide.jpg    1x,
                 ./img/gallery/third_slide@2x.jpg 2x
               "
-              loading="lazy"
+              media="(min-width: 1200px)"
             />
             <img
               class="gallery-img"
               src="./img/gallery/third_slide.jpg"
               alt="game image"
-              width="296px"
+              width="296"
+              loading="lazy"
             />
           </picture>
         </li>
@@ -81,13 +91,14 @@
                 ./img/gallery/fourth_slide.jpg    1x,
                 ./img/gallery/fourth_slide@2x.jpg 2x
               "
-              loading="lazy"
+              media="(min-width: 1200px)"
             />
             <img
               class="gallery-img"
               src="./img/gallery/fourth_slide.jpg"
               alt="game image"
-              width="296px"
+              width="296"
+              loading="lazy"
             />
           </picture>
         </li>
@@ -98,21 +109,18 @@
                 ./img/gallery/fifth_slide.jpg    1x,
                 ./img/gallery/fifth_slide@2x.jpg 2x
               "
-              loading="lazy"
+              media="(min-width: 1200px)"
             />
             <img
               class="gallery-img"
               src="./img/gallery/fifth_slide.jpg"
               alt="game image"
-              width="296px"
+              width="296"
+              loading="lazy"
             />
           </picture>
         </li>
       </ul>
-
-      <!-- <div class="pagination-wrap"> -->
-
-      <!-- </div> -->
     </div>
     <div class="swiper-pagination"></div>
   </div>

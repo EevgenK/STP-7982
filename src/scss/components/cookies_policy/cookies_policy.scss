@@ -19,18 +19,19 @@
   }
 }
 .cookies-text {
+  @include text-style;
   margin-bottom: 16px;
   &.validity-period {
     margin-top: 20px;
   }
-  &.last {
-    margin-bottom: 0px;
-  }
 }
 .cookies-policy_list {
   margin-bottom: 20px;
-  list-style: disc;
+  list-style-type: disc;
   margin-left: 20px;
+  @include media(desktop) {
+    font-size: 20px;
+  }
   .cookies-policy_text {
     & > a {
       @include media(desktop) {
@@ -44,10 +45,10 @@
   }
 }
 .cookies-types_list {
-  list-style: disc;
+  list-style-type: disc;
   margin-left: 20px;
   margin-bottom: 16px;
-  & p {
+  p {
     margin-left: -20px;
   }
   @include media(desktop) {
@@ -56,13 +57,22 @@
 }
 .help-pages_list {
   margin-bottom: 16px;
-  list-style: disc;
+  list-style-type: disc;
   margin-left: 20px;
-
+  li {
+    overflow-wrap: break-word;
+  }
   @include media(desktop) {
+    font-size: 20px;
     margin-bottom: 20px;
   }
 }
 .cookies-page_link {
   color: $_links_color;
+  text-decoration: underline;
+}
+.cookies-text.email::before {
+  content: '•';
+  font-size: inherit;
+  margin-right: 8px;
 }
