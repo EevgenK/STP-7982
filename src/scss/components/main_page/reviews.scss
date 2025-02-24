@@ -40,9 +40,8 @@
   box-sizing: content-box;
 
   border-radius: 8px;
-  border: 1px solid $_main_text_color;
+  padding: 2px;
   @include media(desktop) {
-    border: none;
     padding-bottom: 20px;
     padding-top: 20px;
   }

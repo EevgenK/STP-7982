@@ -32,7 +32,7 @@ const swiperReviews = new Swiper('.swiperReviews', {
     320: {
       slidesPerView: 1,
       loop: false,
-      coverflowEffect: { depth: 0, slideShadows: false },
+      coverflowEffect: { rotate: 0, depth: 0, slideShadows: false },
     },
     1200: {
       slidesPerView: 3,
