@@ -12,14 +12,16 @@
     background-position: top 70px left 60px, bottom right 60px;
   }
 }
-.swiper {
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
+.swiperBenefits {
   max-width: 280px;
   @include media(desktop) {
     max-width: 100%;
   }
+}
+.swiper {
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .benefits {
   background: $_liner_bg;
