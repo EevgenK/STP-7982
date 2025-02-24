@@ -37,7 +37,12 @@
   }
 }
 .swiper.swiperReviews {
+  box-sizing: content-box;
+
+  border-radius: 8px;
+  border: 1px solid $_main_text_color;
   @include media(desktop) {
+    border: none;
     padding-bottom: 20px;
     padding-top: 20px;
   }
@@ -45,20 +50,26 @@
 .reviews-item {
   border-radius: 8px;
   padding: 24px;
-  border: 2px solid $_main_text_color;
+  line-height: 20px;
+  border: 1px solid $_main_text_color;
   box-sizing: border-box;
-
   transition: all $transition;
+  &.swiper-slide {
+    height: 344px;
+  }
+
   @include media(desktop) {
     &.swiper-slide {
+      border: 2px solid $_main_text_color;
       width: 344px;
-      height: 400px;
-      scale: 1;
-      transition: scale 3000s ease-out;
+      height: 440px;
+      transition: border $transition;
+      // scale: 1;
+      // transition: scale 3000s ease-out;
     }
     &.swiper-slide-active {
-      border: 1px solid $_main_text_color;
-      scale: 1.1;
+      // border: 1px solid $_main_text_color;
+      // scale: 1.1;
 
       & > .reviews-item_title {
         font-weight: 500;

@@ -43,6 +43,7 @@ const swiperReviews = new Swiper('.swiperReviews', {
         stretch: 0,
         depth: 80,
         modifier: 1,
+        scale: 0.9,
         slideShadows: false,
       },
     },
