@@ -14,9 +14,6 @@
       margin-bottom: 40px;
     }
   }
-  &-img {
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.72);
-  }
 }
 .container.gallery-container {
   position: relative;
@@ -34,6 +31,8 @@
   border: 1px solid $_main_text_color;
   object-fit: contain;
   box-sizing: content-box;
+  background-position: center;
+  background-size: cover;
   @include media(desktop) {
     width: 712px;
     height: 445px;
@@ -41,6 +40,7 @@
 }
 .swiper-slide img {
   display: block;
+  border-radius: 8px;
   width: 100%;
   height: 100%;
 }

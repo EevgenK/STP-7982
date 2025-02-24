@@ -1,23 +1,29 @@
-import { debounce } from '../about/about';
 import Swiper from 'swiper';
-import { Grid, Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
+import {
+  Grid,
+  Navigation,
+  Pagination,
+  EffectCoverflow,
+  EffectFlip,
+} from 'swiper/modules';
 ('swiper');
+import { debounce } from '../utils';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/scss/grid';
+import 'swiper/scss/effect-flip';
+import 'swiper/scss/effect-coverflow';
 
 const swiperReviews = new Swiper('.swiperReviews', {
   modules: [Navigation, EffectCoverflow],
   effect: 'coverflow',
   centeredSlides: true,
   slidesPerView: 'auto',
-
   speed: 250,
   grabCursor: true,
   spaceBetween: 24,
 
-  // autoplay: true,
   navigation: {
     nextEl: '.reviews-btn.swiper-button-next',
     prevEl: '.reviews-btn.swiper-button-prev',
@@ -25,7 +31,8 @@ const swiperReviews = new Swiper('.swiperReviews', {
   breakpoints: {
     320: {
       slidesPerView: 1,
-      // autoplay: false,
+      loop: false,
+      coverflowEffect: { depth: 0, slideShadows: false },
     },
     1200: {
       slidesPerView: 3,
@@ -38,18 +45,13 @@ const swiperReviews = new Swiper('.swiperReviews', {
         modifier: 1,
         slideShadows: false,
       },
-
-      // autoplay: {
-      //   delay: 2000,
-      //   disableOnInteraction: false,
-      // },
     },
   },
 });
 const swiperGallery = new Swiper('.swiperGallery', {
-  modules: [Navigation, Pagination],
-  speed: 450,
-  spaceBetween: 4,
+  modules: [Navigation, Pagination, EffectFlip],
+  effect: 'flip',
+  speed: 850,
   grabCursor: true,
   hashNavigation: {
     watchState: true,
